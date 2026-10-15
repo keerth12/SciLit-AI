@@ -1,0 +1,24 @@
+# --- UI ---
+streamlit>=1.38.0
+
+# --- LangChain core + integrations ---
+langchain>=0.3.0                 # core chain/prompt abstractions
+langchain-community>=0.3.0       # community-maintained integrations (loaders, etc.)
+langchain-groq>=0.2.0            # Groq LLM integration
+langchain-chroma>=0.1.4          # Chroma vector store integration
+langchain-tavily>=0.1.0          # Tavily web search integration
+langchain-huggingface>=0.1.0     # local HuggingFace embeddings (free, no API key)
+
+# --- Underlying libraries LangChain wraps ---
+chromadb>=0.5.5                  # persistent vector database
+sentence-transformers>=3.0.1     # embedding model runtime
+pypdf>=4.3.1                     # PDF text extraction
+
+# --- Config, logging, validation ---
+pydantic-settings>=2.4.0         # typed, validated config loaded from .env
+python-dotenv>=1.0.1
+
+# --- Testing ---
+pytest>=8.3.0
+
+numpy>=1.26.4
