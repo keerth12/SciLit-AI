@@ -1,20 +1,22 @@
-﻿.env
+﻿
+# Environment variables and secrets
+.env
 .env.*
 !.env.example
 
+# Python virtual environment
 venv/
 .venv/
+
+# Python cache
 __pycache__/
 *.py[cod]
-.ipynb_checkpoints/
 
+# ChromaDB local database
 chroma_db/
-data/
-*.faiss
-*.index
-*.pkl
-*.pickle
-*.pdf
 
-.DS_Store
+# Pytest cache
+.pytest_cache/
+
+# VS Code settings
 .vscode/
