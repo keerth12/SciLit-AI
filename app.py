@@ -7,7 +7,20 @@ input, call a chain, display output, handle errors gracefully. That's
 what "separation of concerns" buys you in practice.
 """
 
+import os
 import streamlit as st
+
+# Load Streamlit Cloud Secrets before creating Pydantic settings.
+try:
+    for key in ("GROQ_API_KEY", "TAVILY_API_KEY"):
+        if key in st.secrets:
+            os.environ[key] = str(st.secrets[key])
+except Exception:
+    # Allow local development when Streamlit Secrets are not configured.
+    pass
+
+from src.config import settings
+
 
 from src.config import settings
 from src.exceptions import SciLitError
